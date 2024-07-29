@@ -416,6 +416,7 @@ nav .right a span{
     }
 
     nav .right a {
-        font-size: 12px;
+        font-size: 20px;
+        margin: 0 2.5px;
     }
 }
