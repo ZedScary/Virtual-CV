@@ -1,7 +1,8 @@
 :root{
-    --text-color: #eeeff1;
-    --link-color: #4a76ee;
-    --background-color: #1a1c20;
+    --text-color: #Daf1de;
+    --link-color: #28b390;
+    --background-color: #051f20;
+    font-size: 22px;
 }
 
 * {
@@ -10,13 +11,32 @@
     box-sizing: border-box;
 }
 
+::placeholder {
+    color: #Daf1de;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #Daf1de;
+    opacity: 0.5;
+  }
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
+    background: linear-gradient(to left, var(--background-color),#0b2b26);
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 a {
@@ -31,13 +51,13 @@ nav {
     top: 0;
     right: 0;
     left: 0;
-    background-color: var(--background-color);
+    background: linear-gradient(to right, var(--background-color),#0b2b26);;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     height: 80px;
-    border-bottom: 1px solid #262930;
+    border-bottom: 1px solid #235347;
 }
 
 nav .left a {
@@ -45,11 +65,13 @@ nav .left a {
     font-size: 22px;
     font-weight: 600;
     transition: font-size 0.2s;
+    vertical-align: middle;
+    line-height: 20px;
 }
 
 nav .left a:hover {
-    color: #abacb3;
-    font-size: 24px;
+    color: #8eb69b;
+    font-size: 25px;
     
 }
 
@@ -58,11 +80,13 @@ nav .right a {
     font-size: 18px;
     margin: 0 10px;
     transition: font-size 0.2s;
+    vertical-align: middle;
+    line-height: 22px;
 }
 
 nav .right a:hover {
-    color: #abacb3;
-    font-size: 20px;
+    color: #8eb69b;
+    font-size: 21px;
 }
 
 nav .right a:last-child {
@@ -74,7 +98,7 @@ nav .right a:last-child {
 }
 
 nav .right a:last-child:hover {
-    background-color: #abacb3;
+    background-color: #8eb69b;
     font-size: 20px;
 }
 
@@ -89,7 +113,7 @@ nav .right a span{
     align-items: center;
     padding: 0 50px;
     margin: 120px 0;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     gap: 40px;
 }
 
@@ -109,6 +133,7 @@ nav .right a span{
     border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
+    transition: color 0.3s ease, border 0.2s ease;
 }
 
 .pdescript .text .links a:hover{
@@ -129,30 +154,52 @@ nav .right a span{
 .pdescript .headshot img {
     border-radius: 50%;
     width: 350px;
+    height: 350px;
 }
 
-/* SECTION 2: Skills*/
+/* SECTION 2: About me*/
+.about-me {
+    padding: 80px 50px;
+    margin-bottom: 0px;
+}
+
+.about-me .text{
+    text-align: left;
+    color: var(--text-color);
+}
+
+.about-me .text h2{
+    font-size: 35px;
+}
+
+/* SECTION 3: Skills*/
 .skills-section {
-    padding: 0 50px;
-    margin-bottom: 100px;
+    padding: 100px 50px;
+    margin-bottom: 0px;
 }
 
 .skills-section h2{
-    text-align: center;
+    text-align: left;
     font-size: 35px;
     color: var(--text-color);
 }
 
 .skills-section .text{
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.skills-section h3{
+    text-align: center;
+    font-size: 30px;
     color: var(--text-color);
 }
 
 .skills-section .cells{
     display: flex;
     justify-content: center;
-    text-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .skills-section .cells .cell{
@@ -161,20 +208,94 @@ nav .right a span{
     align-items: center;
     padding: 10px 20px;
     margin: 10px;
-    width: 200px;
-    border: 1.5px solid #262930;
-    border-radius: 10px;
 }
 
 .skills-section .cells .cell img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
 .skills-section .cells .cell span{
     color: var(--text-color);
     font-weight: 600;
+}
+
+/* SECTION 4: CONTACT ME*/
+.contact-sect {
+    padding: 50px 50px;
+}
+
+.contact-sect .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-sect .group .text{
+    text-align: right;
+    flex: 3;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.contact-sect h2{
+    text-align: center;
+    font-size: 35px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.contact-sect .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.contact-sect .group form input,
+.contact-sect .group form textarea{
+    text-align: left;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: var(--text-color);
+    border: 0px solid;
+    border-bottom: 1px solid #235347;
+    background-color: transparent;
+    padding: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    resize: none;
+    
+}
+
+.contact-sect .group form textarea{
+    border: 1px solid #235347;
+    border-radius: 5px;
+}
+
+.contact-sect .group form button{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    height: 40px;
+    width: 145px;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: background-color 0.2s, width 0.2s, height 0.2s, font-size 0.2s;
+}
+
+.contact-sect .group form button:hover {
+    background-color: #8eb69b;
+    width: 160px;
+    height: 48px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.contact-sect .group form label{
+    color: var(--text-color);
 }
 
 @media (max-width: 850px) {
@@ -191,11 +312,36 @@ nav .right a span{
     }
 
     .pdescript .headshot img{
+        height: 300px;
         width: 300px;
+    }
+
+    /* SECTION 3: Skills*/
+    .skills-section .cells .cell{
+        width: 0;
+        border: 0;
+    }
+
+    .skills-section .cells .cell span{
+        display: none;
+    }
+
+    /* SECTION 4: Contact*/
+    .contact-sect .group {
+        flex-direction: column;
+    }
+
+    .contact-sect .group .text{
+        text-align: left;
     }
 }
 
 @media (max-width: 650px) {
+
+    :root{
+        font-size: 16px;
+    }
+
     /*NAVBAR*/
     nav {
         padding: 0 20px;
@@ -219,5 +365,27 @@ nav .right a span{
 
     .pdescript{
         padding: 20px;
+    }
+
+    /* SECTION 2: About me*/
+
+    .about-me{
+        padding: 20px;
+    }
+
+    /* SECTION 3: Skills*/
+
+    .skills-section{
+        padding: 20px;
+    }
+
+    /* SECTION 4: CONTACT*/
+    .contact-sect{
+        padding: 20px;
+    }
+
+    .contact-sect .group form input,
+    .contact-sect .group form textarea{
+        font-size: 12px;
     }
 }
