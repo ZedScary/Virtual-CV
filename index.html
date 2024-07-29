@@ -132,16 +132,25 @@
                 <div class="text">I'm excited to connect with you! Whether you have questions about my projects, potential collaboration ideas, job opportunities, or just want to say hi, please don't hesitate to reach out. Fill out the form with your name, email, and a brief message detailing the reason for your inquiry. I strive to respond to all messages promptly and am looking forward to hearing from you. Your feedback, questions, and opportunities are important to me, and I am always open to engaging with fellow professionals, enthusiasts, and anyone interested in my work. Thank you for taking the time to reach out, and I hope to connect with you soon!
                 </div>
             
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form action="https://api.web3forms.com/submit" id="contact-form" method="POST">
                     <input type="hidden" name="access_key" value="b499c947-c5eb-4a5c-8a7f-816d701e6477">
                     <label for="name">Name</label>
-                    <input type="text" name="name" placeholder="Enter name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter name" required>
                     <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     <label for="message">Message</label>
-                    <textarea name="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
+                    <button type="button" value="Submit" id="btnsubmit" onclick="submitForm();">Send Message</button>
                 </form>
+
+                <script>
+                    function submitForm(){
+                        var frm = document.getElementById('contact-form');
+                        frm.submit(); // Submit the form
+                        frm.reset();  // Reset all form data
+                        return false;
+                    }
+                </script>
             </div>
             
         </section>
