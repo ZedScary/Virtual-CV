@@ -51,7 +51,7 @@ nav {
     top: 0;
     right: 0;
     left: 0;
-    background: linear-gradient(to right, var(--background-color),#0b2b26);;
+    background: linear-gradient(to right, var(--background-color),#0b2b26);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -153,8 +153,15 @@ nav .right a span{
 
 .pdescript .headshot img {
     border-radius: 50%;
+    border: 5px solid var(--text-color);
     width: 350px;
     height: 350px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pdescript .headshot img:hover {
+    width: 500px;
+    height: 500px;
 }
 
 /* SECTION 2: About me*/
@@ -213,6 +220,12 @@ nav .right a span{
 .skills-section .cells .cell img{
     width: 60px;
     height: 60px;
+    object-fit: contain;
+}
+
+.skills-section .cells .cell-web img{
+    width: 150px;
+    height: 90px;
     object-fit: contain;
 }
 
@@ -279,6 +292,7 @@ nav .right a span{
     font-size: 16px;
     height: 40px;
     width: 145px;
+    margin-top: 10px;
     border-radius: 5px;
     border: 0;
     background-color: var(--text-color);
