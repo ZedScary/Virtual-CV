@@ -403,3 +403,14 @@ nav .right a span{
         font-size: 12px;
     }
 }
+
+@media (max-width: 370px){
+
+    nav .left a{
+        font-size: 18px;
+    }
+
+    nav .right a {
+        font-size: 14px;
+    }
+}
