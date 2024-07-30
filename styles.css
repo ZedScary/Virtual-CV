@@ -46,20 +46,22 @@ a {
 
 /* CV */
 .CV{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    padding: 100px;
+    padding: 100px 50px;
+    color: var(--text-color);
 }
 
-.CV p{
-    margin-left: auto;
-    margin-right: auto;
+.CV h3{
+    font-size: 34px;
 }
 
-.CV embed{
-    toolbar: 0;
+.CV h4{
+    font-size: 28px;
 }
+
+.CV span{
+    display: block;
+}
+
 /* NAVBAR */
 
 nav {
@@ -78,7 +80,7 @@ nav {
 
 nav .left a {
     color: var(--text-color);
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 600;
     transition: font-size 0.2s;
     vertical-align: middle;
@@ -87,7 +89,7 @@ nav .left a {
 
 nav .left a:hover {
     color: #8eb69b;
-    font-size: 25px;
+    font-size: 34px;
     
 }
 
@@ -381,6 +383,11 @@ nav .right a span{
     /*NAVBAR*/
     nav {
         padding: 0 20px;
+    }
+
+    nav .left a:hover {
+        color: #8eb69b;
+        font-size: 25px;
     }
 
     nav .right a {
