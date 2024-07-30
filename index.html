@@ -18,9 +18,14 @@
     <!--NAVBAR-->
     <nav>
         <div class="left">
-            <a href="#">Shaldon Senekal</a>
+            <a href="#" onclick="showMain();hideCV();">Shaldon Senekal</a>
         </div>
         <div class="right">
+            <a href="#" onclick="hideMain();showCV();">
+                <i class="fa-solid fa-pen-clip"></i>
+                <span>CV</span>
+            </a>
+
             <a href="https://github.com/ZedScary" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i>
                 <span>Github</span>   
@@ -35,125 +40,160 @@
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email</span>   
             </a>
+
+            
         </div>
     </nav>
+
+    <script>
+        function hideMain(){
+            var allcontent = document.getElementById('content-main');
+                allcontent.style.display='none';
+        }
+
+        function showMain(){
+            var allcontent = document.getElementById('content-main');
+                allcontent.style.display='block';
+        }
+
+        function hideCV(){
+            var allcontent = document.getElementById('content-CV');
+                allcontent.style.display='none';
+        }
+
+        function showCV(){
+            var allcontent = document.getElementById('content-CV');
+                allcontent.style.display='block';
+        };
+    </script>
+
     <main>
-        <!--Section 1 - Description-->
-        <section class="pdescript">
-            <div class="text">
-                <h2>Hi I'm Shaldon Senekal</h2>
-                <p> A soon-to-be graduate with a Bachelor of Science degree in Information Technology.</p>
+        <div id="content-main">
+            <!--Section 1 - Description-->
+            <section class="pdescript">
+                <div class="text">
+                    <h2>Hi I'm Shaldon Senekal</h2>
+                    <p> A soon-to-be graduate with a Bachelor of Science degree in Information Technology.</p>
 
-                <div class="links">
-                    <a href="#about-me">
-                        <i class="fa-solid fa-user"></i>
-                        <span>About me</span>
-                    </a>
-                    <a href="#skills">
-                        <i class="fa-solid fa-code"></i>
-                        <span>Technical Proficiencies</span>
-                    </a>
-                    <a href="#contact-me">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Contact me</span>
-                    </a>
+                    <div class="links">
+                        <a href="#about-me">
+                            <i class="fa-solid fa-user"></i>
+                            <span>About me</span>
+                        </a>
+                        <a href="#skills">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Technical Proficiencies</span>
+                        </a>
+                        <a href="#contact-me">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact me</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="headshot">
-                <img src="Images/pfp.webp" alt="Shaldon Senekal Headshot">
-            </div>
-        </section>
+                <div class="headshot">
+                    <img src="Images/pfp.webp" alt="Shaldon Senekal Headshot">
+                </div>
+            </section>
 
-        <!--Section 2 - About me-->
-        <section id="about-me" class="about-me">
-            <div class="text">
-                <h2>About me</h2>
-                <p>Throughout my academic journey, I have developed a passion for creating programs, designing websites, and building computers. My foundational experience with software and hardware has equipped me with a solid foundational of the IT field. I spend a significant amount of time on computers, constantly learning new technologies and enhancing my skills. This dedication to self-improvement has not only helped me excel academically, maintaining an average above distinction, but also fueled my enthusiasm for game development and programming. In addition to my technical pursuits, I enjoy a balanced lifestyle. Regular visits to the gym keep me physically active, and I value the time spent socializing with my friends. These activities provide a healthy counterbalance to my computer-centric hobbies and help me maintain a well-rounded life. Whether it's through building custom PCs, developing innovative software solutions, or engaging in collaborative projects, I'm always eager to take on new challenges and expand my horizons. I am excited about the future and look forward to applying my skills and passions in a professional setting. Thank you for visiting my portfolio. Let's connect and explore the endless possibilities in the world of IT!</p>    
+            <!--Section 2 - About me-->
+            <section id="about-me" class="about-me">
+                <div class="text">
+                    <h2>About me</h2>
+                    <p>Throughout my academic journey, I have developed a passion for creating programs, designing websites, and building computers. My foundational experience with software and hardware has equipped me with a solid foundational of the IT field. I spend a significant amount of time on computers, constantly learning new technologies and enhancing my skills. This dedication to self-improvement has not only helped me excel academically, maintaining an average above distinction, but also fueled my enthusiasm for game development and programming. In addition to my technical pursuits, I enjoy a balanced lifestyle. Regular visits to the gym keep me physically active, and I value the time spent socializing with my friends. These activities provide a healthy counterbalance to my computer-centric hobbies and help me maintain a well-rounded life. Whether it's through building custom PCs, developing innovative software solutions, or engaging in collaborative projects, I'm always eager to take on new challenges and expand my horizons. I am excited about the future and look forward to applying my skills and passions in a professional setting. Thank you for visiting my portfolio. Let's connect and explore the endless possibilities in the world of IT!</p>    
+                </div>
+                
+            </section>
+
+            <!--Section 3 - Skills-->
+            <section id="skills" class="skills-section">
+                <h2>I have worked with the following</h2>
+                <div class="text">I have a strong foundation in various technologies, including C#, C++, Java, and Python for programming, as well as HTML and CSS for web development. My experience also extends to working with Oracle databases, GitHub for version control, and VS Code as my primary development environment.
+                </div>
+                <h3>Programming Languages</h3>
+                <div class="cells">
+                    <div class="cell">
+                        <img src="Images/c.svg" alt="C# logo">
+                    </div>
+
+                    <div class="cell">
+                        <img src="Images/c++.svg" alt="C++ logo">
+                    </div>
+
+                    <div class="cell">
+                        <img src="Images/java.svg" alt="Java logo">
+                    </div>
+
+                    <div class="cell">
+                        <img src="Images/Python-logo-notext.svg" alt="Python logo">
+                    </div>
+                </div>
+                <h3>Web Development</h3>
+                <div class="cells">
+                    <div class="cell">
+                        <img src="Images/128px-HTML5_logo_resized.svg.png" alt="HTML logo">
+                    </div>
+
+                    <div class="cell">
+                        <img src="Images/w3_css-official.svg" alt="CSS logo">
+                    </div>
+                </div>
+                <h3>Databases</h3>
+                <div class="cells">
+                    <div class="cell-web">
+                        <img src="Images/oracle-6.svg" alt="Oracle logo">
+                    </div>
+                </div>
+                <h3>Tools</h3>
+                <div class="cells">
+                    <div class="cell">
+                        <img src="Images/icons8-github.svg" alt="Github logo">
+                    </div>
+
+                    <div class="cell">
+                        <img src="Images/vscode.svg" alt="vs logo">
+                    </div>
+                </div>
+            </section>
+
+            <!--Contact me section-->
+            <section id="contact-me" class="contact-sect">
+                <h2>Contact</h2>
+                <div class="group">
+                    <div class="text">I'm excited to connect with you! Whether you have questions about my projects, potential collaboration ideas, job opportunities, or just want to say hi, please don't hesitate to reach out. Fill out the form with your name, email, and a brief message detailing the reason for your inquiry. I strive to respond to all messages promptly and am looking forward to hearing from you. Your feedback, questions, and opportunities are important to me, and I am always open to engaging with fellow professionals, enthusiasts, and anyone interested in my work. Thank you for taking the time to reach out, and I hope to connect with you soon!
+                    </div>
+                
+                    <form action="https://api.web3forms.com/submit" id="contact-form" method="POST">
+                        <input type="hidden" name="access_key" value="b499c947-c5eb-4a5c-8a7f-816d701e6477">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
+                        <button type="button" value="Submit" id="btnsubmit" onclick="submitForm();">Send Message</button>
+                    </form>
+
+                    <script>
+                        function submitForm(){
+                            var frm = document.getElementById('contact-form');
+                            frm.submit(); // Submit the form
+                            frm.reset();  // Reset all form data
+                            return false;
+                        }
+                    </script>
             </div>
             
         </section>
-
-        <!--Section 3 - Skills-->
-        <section id="skills" class="skills-section">
-            <h2>I have worked with the following</h2>
-            <div class="text">I have a strong foundation in various technologies, including C#, C++, Java, and Python for programming, as well as HTML and CSS for web development. My experience also extends to working with Oracle databases, GitHub for version control, and VS Code as my primary development environment.
-            </div>
-            <h3>Programming Languages</h3>
-            <div class="cells">
-                <div class="cell">
-                    <img src="Images/c.svg" alt="C# logo">
-                </div>
-
-                <div class="cell">
-                    <img src="Images/c++.svg" alt="C++ logo">
-                </div>
-
-                <div class="cell">
-                    <img src="Images/java.svg" alt="Java logo">
-                </div>
-
-                <div class="cell">
-                    <img src="Images/Python-logo-notext.svg" alt="Python logo">
-                </div>
-            </div>
-            <h3>Web Development</h3>
-            <div class="cells">
-                <div class="cell">
-                    <img src="Images/128px-HTML5_logo_resized.svg.png" alt="HTML logo">
-                </div>
-
-                <div class="cell">
-                    <img src="Images/w3_css-official.svg" alt="CSS logo">
-                </div>
-            </div>
-            <h3>Databases</h3>
-            <div class="cells">
-                <div class="cell-web">
-                    <img src="Images/oracle-6.svg" alt="Oracle logo">
-                </div>
-            </div>
-            <h3>Tools</h3>
-            <div class="cells">
-                <div class="cell">
-                    <img src="Images/icons8-github.svg" alt="Github logo">
-                </div>
-
-                <div class="cell">
-                    <img src="Images/vscode.svg" alt="vs logo">
-                </div>
-            </div>
-        </section>
-
-        <!--Contact me section-->
-        <section id="contact-me" class="contact-sect">
-            <h2>Contact</h2>
-            <div class="group">
-                <div class="text">I'm excited to connect with you! Whether you have questions about my projects, potential collaboration ideas, job opportunities, or just want to say hi, please don't hesitate to reach out. Fill out the form with your name, email, and a brief message detailing the reason for your inquiry. I strive to respond to all messages promptly and am looking forward to hearing from you. Your feedback, questions, and opportunities are important to me, and I am always open to engaging with fellow professionals, enthusiasts, and anyone interested in my work. Thank you for taking the time to reach out, and I hope to connect with you soon!
-                </div>
-            
-                <form action="https://api.web3forms.com/submit" id="contact-form" method="POST">
-                    <input type="hidden" name="access_key" value="b499c947-c5eb-4a5c-8a7f-816d701e6477">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter name" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
-                    <button type="button" value="Submit" id="btnsubmit" onclick="submitForm();">Send Message</button>
-                </form>
-
-                <script>
-                    function submitForm(){
-                        var frm = document.getElementById('contact-form');
-                        frm.submit(); // Submit the form
-                        frm.reset();  // Reset all form data
-                        return false;
-                    }
-                </script>
-            </div>
-            
-        </section>
+        </div styles>
+        <!--CV-->
+        <div class="CV" id="content-CV" style="display: none;">
+            <p><object data="CV/Deliverable 1 Brief.pdf" type="application/pdf" width=992px height=800px>
+                <p>It appears you don't have a PDF plugin for this browser.
+                    No biggie... you can <a href="">click here to
+                     download the PDF file.</a></p>
+            </object>
+        </div>
     </main>
 </body>
 </html>
