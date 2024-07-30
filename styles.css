@@ -48,10 +48,20 @@ a {
 .CV{
     padding: 100px 50px;
     color: var(--text-color);
+    border-right: 2px solid #235347;
+    border-left: 2px solid #235347;
 }
 
 .CV h3{
     font-size: 34px;
+    border-top: 0px solid #235347;
+    border-bottom: 2px solid #235347;
+}
+
+.CV h3:first-child{
+    font-size: 34px;
+    border-top: 0px solid #235347;
+    border-bottom: 2px solid #235347;
 }
 
 .CV h4{
@@ -60,6 +70,11 @@ a {
 
 .CV span{
     display: block;
+}
+
+.CV .responsibility{
+    border-top: 2px solid #235347;
+    margin-left: 0 20px;
 }
 
 /* NAVBAR */
@@ -341,6 +356,15 @@ nav .right a span{
         width: 300px;
         height: 300px;
     }
+
+    .CV {
+        border-left: 0px ;
+        border-right: 0px ;
+    }
+
+    .CV img {
+        width: 500px;
+    }
 }
 
 @media (max-width: 740px) {
@@ -378,6 +402,15 @@ nav .right a span{
 
     :root{
         font-size: 16px;
+    }
+
+    /*CV*/
+    .CV{
+        padding: 100px 20px;
+    }
+    
+    .CV img{
+        width: 320px;
     }
 
     /*NAVBAR*/
@@ -442,5 +475,13 @@ nav .right a span{
     nav .right a {
         font-size: 20px;
         margin: 0 2.5px;
+    }
+
+    .CV h3 {
+        font-size: 24px;
+    }
+
+    .CV h4 {
+        font-size: 20px;
     }
 }
