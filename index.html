@@ -176,7 +176,7 @@
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
                         <label for="message">Message</label>
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
-                        <button type="button" value="Submit" id="btnsubmit" onclick="submitForm();">Send Message</button>
+                        <button type="button" value="Submit" id="btnsubmit" onclick="validateFields();">Send Message</button>
                     </form>
 
                     <script>
@@ -185,6 +185,35 @@
                             frm.submit(); // Submit the form
                             frm.reset();  // Reset all form data
                             return false;
+                        }
+
+                        function validateFields(){
+                            var name = document.getElementById('name');
+                            var email = document.getElementById('email');
+                            var message = document.getElementById('message');
+
+                            if (name.value == '' || name.value == null){
+                                name.style.borderBottomColor = 'red';
+                                email.style.borderBottomColor = '#235347';
+                                message.style.borderColor = '#235347';
+                            }else{
+                                name.style.borderBottomColor = '#235347';
+                                email.style.borderBottomColor = 'red';
+                                message.style.borderColor = '#235347';
+                                if (email.value == '' || name.value == null){
+                                }else{
+                                    name.style.borderBottomColor = '#235347';
+                                    email.style.borderBottomColor = '#235347';
+                                    message.style.borderColor = 'red';
+                                    if (message.value == '' || name.value == null){
+                                    }else{
+                                        name.style.borderBottomColor = '#235347';
+                                        email.style.borderBottomColor = '#235347';
+                                        message.style.borderColor = '#235347';
+                                        submitForm();
+                                    }
+                                }
+                            }
                         }
                     </script>
             </div>
