@@ -50,6 +50,27 @@ a {
     color: var(--text-color);
     border-right: 2px solid #235347;
     border-left: 2px solid #235347;
+    justify-content: space-between;
+}
+
+.CV a{
+    font-size: 30px;
+    display: inline-flex;
+    transition: color 0.3s ease, border 0.2s ease;
+    margin: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CV a i{
+    margin-left: 20px;
+    padding: 0 0;
+}
+
+.CV a:hover{
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    cursor: pointer;
 }
 
 .CV h3{
@@ -217,6 +238,16 @@ nav .right a span{
 .skills-section {
     padding: 100px 50px;
     margin-bottom: 0px;
+    text-align: center;
+}
+
+.skills-section a{
+    transition: color 0.3s ease, border 0.2s ease;
+}
+
+.skills-section a:hover{
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
 }
 
 .skills-section h2{
@@ -243,7 +274,8 @@ nav .right a span{
     flex-wrap: wrap;
 }
 
-.skills-section .cells .cell{
+.skills-section .cells .cell,
+.skills-section .cells .cell-db{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,12 +284,12 @@ nav .right a span{
 }
 
 .skills-section .cells .cell img{
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
-.skills-section .cells .cell-web img{
+.skills-section .cells .cell-db img{
     width: 150px;
     height: 90px;
     object-fit: contain;
@@ -388,6 +420,18 @@ nav .right a span{
         display: none;
     }
 
+    .skills-section .cells .cell img{
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+    
+    .skills-section .cells .cell-db img{
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
     /* SECTION 4: Contact*/
     .contact-sect .group {
         flex-direction: column;
@@ -433,6 +477,11 @@ nav .right a span{
         padding: 0;
     }
 
+    nav .right a:first-child span{
+        display: inline;
+        font-size: 16px;
+    }
+
     nav .right a span{
         display: none;
     }
@@ -454,6 +503,7 @@ nav .right a span{
     .skills-section{
         padding: 20px;
     }
+
 
     /* SECTION 4: CONTACT*/
     .contact-sect{
