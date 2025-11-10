@@ -29,6 +29,13 @@ html {
     scroll-behavior: smooth;
 }
 
+iframe {
+  width: 100%;
+  margin-top: 3.75rem;
+  height: calc(100vh - 4rem);
+  border: none;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to left, var(--background-color),#0b2b26);
@@ -507,6 +514,12 @@ nav .right a span{
     .contact-sect .group form input,
     .contact-sect .group form textarea{
         font-size: 12px;
+    }
+
+    iframe {
+        width: 100%;
+        margin-top: 5rem;
+        height: calc(100vh - 4rem);
     }
 }
 
